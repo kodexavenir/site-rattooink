@@ -1,0 +1,253 @@
+/* RattooInk — final reference visual pass */
+:root {
+  --ref-rose: #c88e7a;
+  --ref-rose-light: #e6b29f;
+  --ref-rose-dark: #8c5847;
+  --ref-bg: #0a0a0a;
+  --ref-header: #141110;
+  --ref-panel: #141110;
+  --ref-muted: #a69188;
+  --ref-line: rgba(200, 142, 122, 0.26);
+}
+
+body,
+body.font-sans {
+  background: var(--ref-bg) !important;
+  color: #f6f0ec !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-tattoo,
+.serif {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+/* HEADER */
+#navbar {
+  background:
+    radial-gradient(circle at 25% 40%, rgba(200,142,122,.06), transparent 28%),
+    linear-gradient(180deg, rgba(20,17,16,.99), rgba(10,10,10,.98)) !important;
+  border-bottom: 1px solid var(--ref-line) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.36) !important;
+}
+
+#navbar .font-tattoo {
+  color: #fff !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: .08em !important;
+}
+
+#navbar .text-rattoo-pink { color: var(--ref-rose-light) !important; }
+
+#navbar a:not(.bg-rattoo-pink) {
+  color: var(--ref-rose-light) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: .12em !important;
+}
+
+#navbar a.bg-rattoo-pink {
+  background: linear-gradient(135deg, var(--ref-rose-light), var(--ref-rose)) !important;
+  color: #201613 !important;
+  border: 1px solid var(--ref-rose-light) !important;
+  box-shadow: 0 8px 24px rgba(200,142,122,.16) !important;
+}
+
+/* HERO */
+#accueil {
+  background:
+    radial-gradient(circle at 14% 38%, rgba(200,142,122,.09), transparent 28%),
+    radial-gradient(circle at 80% 28%, rgba(200,142,122,.06), transparent 32%),
+    linear-gradient(180deg, #0a0a0a 0%, #0d0b0a 100%) !important;
+}
+
+#accueil h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+  color: #f6eee9 !important;
+  letter-spacing: .015em !important;
+}
+
+#accueil h1 span {
+  color: var(--ref-rose-light) !important;
+  text-shadow: 0 0 24px rgba(200,142,122,.16) !important;
+}
+
+#accueil a.bg-rattoo-pink {
+  background: linear-gradient(135deg, var(--ref-rose-light), var(--ref-rose-dark)) !important;
+  color: #211613 !important;
+  border: 1px solid var(--ref-rose-light) !important;
+}
+
+#accueil a:not(.bg-rattoo-pink) {
+  border-color: var(--ref-rose) !important;
+  color: var(--ref-rose-light) !important;
+}
+
+/* ARTISTE / MAGAZINE */
+#concept {
+  background: #0a0a0a !important;
+  position: relative !important;
+}
+
+#concept .max-w-7xl > .grid {
+  position: relative !important;
+  align-items: stretch !important;
+}
+
+#concept .max-w-7xl > .grid::after {
+  content: '';
+  position: absolute;
+  top: 4%;
+  bottom: 4%;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent, var(--ref-rose), transparent);
+  opacity: .72;
+  pointer-events: none;
+}
+
+#concept h2 {
+  color: #f6eee9 !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 500 !important;
+}
+
+#concept h2 .text-rattoo-pink,
+#concept .text-rattoo-pink {
+  color: var(--ref-rose-light) !important;
+}
+
+#concept .rounded-full {
+  border-color: var(--ref-line) !important;
+  box-shadow: 0 18px 50px rgba(0,0,0,.5), 0 0 40px rgba(200,142,122,.08) !important;
+}
+
+#concept .bg-black\/50 {
+  background: rgba(20,17,16,.72) !important;
+  border-color: var(--ref-line) !important;
+}
+
+/* GALERIE */
+#galerie {
+  background: #0a0a0a !important;
+}
+
+#galerie .group.relative {
+  border-radius: 0 !important;
+  border-color: var(--ref-rose) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#galerie .group.relative:hover {
+  border-color: var(--ref-rose-light) !important;
+}
+
+#galerie .group.relative img {
+  filter: none !important;
+}
+
+#galerie .group.relative .bg-gradient-to-t {
+  display: none !important;
+}
+
+#galerie .group.relative::after {
+  color: var(--ref-rose-light) !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 400 !important;
+}
+
+/* LABO IA — verre fumé cuivre */
+#ai-lab {
+  background:
+    radial-gradient(circle at center, rgba(200,142,122,.05), transparent 42%),
+    #090909 !important;
+}
+
+#ai-lab > .max-w-6xl > .bg-\[\#0a0a0a\]\/80 {
+  background: linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.012)) !important;
+  border: 1px solid var(--ref-line) !important;
+  box-shadow: 0 30px 80px rgba(0,0,0,.48) !important;
+  backdrop-filter: blur(22px) !important;
+  -webkit-backdrop-filter: blur(22px) !important;
+}
+
+#ai-lab h2 {
+  color: var(--ref-rose-light) !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 500 !important;
+}
+
+#ai-lab .text-transparent.bg-clip-text {
+  color: var(--ref-rose-light) !important;
+}
+
+#ai-lab .focus-within\:border-rattoo-pink\/70:focus-within {
+  border-color: rgba(200,142,122,.68) !important;
+  box-shadow: 0 0 30px rgba(200,142,122,.08) !important;
+}
+
+#ai-lab #generate-btn {
+  background: linear-gradient(135deg, #e8d8d0, var(--ref-rose)) !important;
+  color: #201613 !important;
+  border: 1px solid var(--ref-rose-light) !important;
+  box-shadow: 0 10px 24px rgba(200,142,122,.12) !important;
+}
+
+#ai-lab #generate-btn:hover {
+  background: linear-gradient(135deg, #f1dfd6, var(--ref-rose-light)) !important;
+  color: #201613 !important;
+}
+
+#ai-lab #ai-result-area {
+  border-color: var(--ref-line) !important;
+  background: rgba(0,0,0,.32) !important;
+}
+
+/* CONTACT / FOOTER */
+#contact,
+footer {
+  background: #000 !important;
+}
+
+#contact .bg-rattoo-dark,
+#contact .bg-rattoo-gray {
+  background: var(--ref-header) !important;
+  border-color: var(--ref-line) !important;
+}
+
+#contact .text-rattoo-pink,
+footer .text-rattoo-pink {
+  color: var(--ref-rose-light) !important;
+}
+
+@media (max-width: 900px) {
+  #concept .max-w-7xl > .grid::after { display: none; }
+
+  #concept .max-w-7xl > .grid::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 50%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ref-rose), transparent);
+    opacity: .55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

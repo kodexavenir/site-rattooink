@@ -31,6 +31,23 @@ function parseBody(req) {
   return req.body;
 }
 
+function findGeneratedImage(data) {
+  const parts = data?.candidates?.[0]?.content?.parts;
+  if (!Array.isArray(parts)) return null;
+
+  for (const part of parts) {
+    const inlineData = part?.inlineData || part?.inline_data;
+    if (inlineData?.data) {
+      return {
+        data: inlineData.data,
+        mimeType: inlineData.mimeType || inlineData.mime_type || 'image/png'
+      };
+    }
+  }
+
+  return null;
+}
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -93,51 +110,66 @@ export default async function handler(req, res) {
     const timeout = setTimeout(() => controller.abort(), 60_000);
 
     try {
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/interactions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-goog-api-key': apiKey
-        },
-        body: JSON.stringify({
-          model: 'gemini-3.1-flash-image',
-          input: prompt
-        }),
-        signal: controller.signal
-      });
+      const response = await fetch(
+        'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': apiKey
+          },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [{ text: prompt }]
+              }
+            ],
+            generationConfig: {
+              responseModalities: ['IMAGE'],
+              imageConfig: {
+                aspectRatio: '1:1'
+              }
+            }
+          }),
+          signal: controller.signal
+        }
+      );
 
       const data = await response.json();
 
       if (!response.ok) {
+        const apiMessage = String(data?.error?.message || '').trim();
+        const quotaError = response.status === 429 || /quota|billing|free tier/i.test(apiMessage);
+
         console.error('Gemini API error', {
           status: response.status,
-          message: data?.error?.message || 'unknown'
+          message: apiMessage || 'unknown'
         });
-        return res.status(502).json({ error: 'Le moteur IA n’a pas pu générer cette création.' });
-      }
 
-      let image = data?.output_image;
-
-      if (!image && Array.isArray(data?.steps)) {
-        for (const step of data.steps) {
-          for (const block of step?.content || []) {
-            if (block?.type === 'image' && block?.data) {
-              image = block;
-              break;
-            }
-          }
-          if (image) break;
+        if (quotaError) {
+          return res.status(503).json({
+            code: 'GEMINI_BILLING_REQUIRED',
+            error: 'La génération d’images est momentanément indisponible. Le compte Gemini API doit disposer d’une facturation active pour générer des images.'
+          });
         }
+
+        return res.status(502).json({
+          code: 'GEMINI_UPSTREAM_ERROR',
+          error: 'Le moteur IA n’a pas pu générer cette création.'
+        });
       }
 
-      if (!image?.data) {
-        return res.status(502).json({ error: 'Le moteur IA a répondu sans image exploitable.' });
-      }
+      const image = findGeneratedImage(data);
 
-      const mimeType = image.mime_type || image.mimeType || 'image/png';
+      if (!image) {
+        return res.status(502).json({
+          code: 'GEMINI_NO_IMAGE',
+          error: 'Le moteur IA a répondu sans image exploitable.'
+        });
+      }
 
       return res.status(200).json({
-        imageDataUrl: `data:${mimeType};base64,${image.data}`
+        imageDataUrl: `data:${image.mimeType};base64,${image.data}`
       });
     } finally {
       clearTimeout(timeout);

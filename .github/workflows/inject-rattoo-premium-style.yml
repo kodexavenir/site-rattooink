@@ -51,3 +51,5 @@ jobs:
           fi
           git commit -m 'feat(ui): wire premium visual stylesheet'
           git push
+
+# trigger: wire visual layer

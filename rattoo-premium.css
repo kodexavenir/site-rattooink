@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+  --rp-rose: #c88e7a;
+  --rp-rose-light: #e6b29f;
+  --rp-rose-dark: #8c5847;
+  --rp-bg: #0a0a0a;
+  --rp-panel: #141110;
+  --rp-panel-soft: #191512;
+  --rp-muted: #a69188;
+  --rp-line: rgba(200, 142, 122, 0.22);
+  --rp-glow: rgba(200, 142, 122, 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+body.font-sans {
+  background: var(--rp-bg) !important;
+  color: #f6f0ec !important;
+  font-family: 'Montserrat', sans-serif !important;
+  overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, .font-tattoo, .serif {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+.bg-rattoo-dark,
+.bg-black {
+  background-color: var(--rp-bg) !important;
+}
+
+.bg-rattoo-gray,
+.bg-\[\#0a0a0a\] {
+  background-color: var(--rp-panel) !important;
+}
+
+.text-rattoo-pink,
+.text-transparent.bg-clip-text {
+  color: var(--rp-rose) !important;
+}
+
+.border-rattoo-pink,
+.border-rattoo-pink\/20,
+.border-rattoo-pink\/30,
+.border-rattoo-pink\/40,
+.border-rattoo-pink\/50 {
+  border-color: var(--rp-line) !important;
+}
+
+.bg-rattoo-pink {
+  background: linear-gradient(135deg, var(--rp-rose-light), var(--rp-rose)) !important;
+}
+
+.hover\:bg-rattoo-pink:hover {
+  background: var(--rp-rose) !important;
+}
+
+#navbar {
+  background: rgba(20, 17, 16, 0.95) !important;
+  border-bottom: 1px solid var(--rp-line) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.42) !important;
+}
+
+#navbar .font-tattoo {
+  color: #ffffff !important;
+  letter-spacing: .08em !important;
+}
+
+#navbar .text-rattoo-pink {
+  color: var(--rp-rose-light) !important;
+}
+
+#navbar a:not(.bg-rattoo-pink) {
+  color: var(--rp-rose-light) !important;
+  transition: color .25s ease, transform .25s ease !important;
+}
+
+#navbar a:not(.bg-rattoo-pink):hover {
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+#navbar .bg-rattoo-pink {
+  border: 1px solid var(--rp-rose-light) !important;
+  box-shadow: 0 8px 25px var(--rp-glow) !important;
+  border-radius: 999px !important;
+}
+
+#mobile-menu {
+  background: rgba(20, 17, 16, .98) !important;
+  border-bottom: 1px solid var(--rp-line) !important;
+}
+
+#accueil {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(200,142,122,.11), transparent 27%),
+    radial-gradient(circle at 78% 35%, rgba(200,142,122,.08), transparent 30%),
+    linear-gradient(180deg, #0a0a0a 0%, #0d0b0a 55%, #0a0a0a 100%) !important;
+}
+
+#accueil h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+  color: #f8eee8 !important;
+}
+
+#accueil h1 span {
+  color: var(--rp-rose-light) !important;
+  text-shadow: 0 0 28px rgba(200,142,122,.16) !important;
+}
+
+#accueil p {
+  color: #b8aaa3 !important;
+}
+
+#accueil a.bg-rattoo-pink,
+#contact a.bg-rattoo-pink,
+#contact button.bg-rattoo-pink,
+#ai-lab button.bg-rattoo-pink {
+  background: linear-gradient(135deg, var(--rp-rose-light), var(--rp-rose-dark)) !important;
+  border: 1px solid var(--rp-rose-light) !important;
+  box-shadow: 0 10px 28px rgba(200,142,122,.18) !important;
+  border-radius: 999px !important;
+}
+
+#accueil a.bg-rattoo-pink:hover,
+#contact a.bg-rattoo-pink:hover,
+#contact button.bg-rattoo-pink:hover,
+#ai-lab button.bg-rattoo-pink:hover {
+  background: linear-gradient(135deg, #ecd0c4, var(--rp-rose)) !important;
+  color: #171210 !important;
+}
+
+#accueil a:not(.bg-rattoo-pink) {
+  border-color: var(--rp-rose) !important;
+  color: var(--rp-rose-light) !important;
+}
+
+#concept,
+#galerie,
+#faq,
+#contact,
+#ai-lab {
+  border-top-color: var(--rp-line) !important;
+}
+
+#concept h2,
+#galerie h2,
+#faq h2,
+#contact h2,
+#ai-lab h2 {
+  color: var(--rp-rose-light) !important;
+  letter-spacing: .04em;
+}
+
+#concept .rounded-full,
+#concept .shadow-\[0_0_50px_rgba\(255\,51\,133\,0\.15\)\] {
+  border-color: var(--rp-line) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45), 0 0 50px rgba(200,142,122,.10) !important;
+}
+
+#concept .text-rattoo-pink,
+#faq .text-rattoo-pink,
+#contact .text-rattoo-pink,
+#ai-lab .text-rattoo-pink {
+  color: var(--rp-rose-light) !important;
+}
+
+#galerie {
+  background:
+    radial-gradient(circle at 50% 10%, rgba(200,142,122,.05), transparent 32%),
+    var(--rp-bg) !important;
+}
+
+#galerie .max-w-7xl,
+#galerie .max-w-6xl {
+  max-width: 1220px !important;
+}
+
+#galerie .group.relative {
+  background: var(--rp-panel) !important;
+  border: 1px solid var(--rp-rose) !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,.46) !important;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease !important;
+}
+
+#galerie .group.relative:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--rp-rose-light) !important;
+  box-shadow: 0 18px 40px rgba(200,142,122,.14) !important;
+}
+
+#galerie .group.relative img {
+  filter: saturate(.78) contrast(1.02) !important;
+  transition: transform .6s ease, filter .6s ease !important;
+}
+
+#galerie .group.relative:hover img {
+  filter: saturate(.98) contrast(1.04) !important;
+}
+
+#galerie .group.relative .text-rattoo-pink {
+  color: var(--rp-rose-light) !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+#galerie .group.relative .bg-gradient-to-t {
+  background: linear-gradient(to top, rgba(20,17,16,.94), rgba(20,17,16,.18), transparent) !important;
+}
+
+#faq .bg-rattoo-gray,
+#contact .bg-rattoo-dark,
+#contact .bg-rattoo-gray {
+  background: var(--rp-panel) !important;
+  border-color: var(--rp-line) !important;
+}
+
+#ai-lab {
+  background: linear-gradient(180deg, #0a0a0a 0%, #100d0b 100%) !important;
+}
+
+#ai-lab .rounded-\[2rem\],
+#ai-lab .rounded-2xl {
+  border-color: var(--rp-line) !important;
+  box-shadow: 0 25px 70px rgba(0,0,0,.45) !important;
+}
+
+#ai-lab .focus-within\:border-rattoo-pink\/70:focus-within {
+  border-color: rgba(200,142,122,.68) !important;
+}
+
+#ai-lab input {
+  color: #f4ebe7 !important;
+}
+
+#ai-lab input::placeholder {
+  color: #756861 !important;
+}
+
+#contact {
+  background: var(--rp-panel) !important;
+}
+
+#cookie-banner {
+  background: rgba(20,17,16,.98) !important;
+  border-top: 1px solid var(--rp-line) !important;
+  box-shadow: 0 -10px 35px rgba(0,0,0,.45) !important;
+}
+
+#cookie-banner .bg-rattoo-pink {
+  background: linear-gradient(135deg, var(--rp-rose-light), var(--rp-rose)) !important;
+  color: #1a120f !important;
+}
+
+#cookie-banner .text-rattoo-pink {
+  color: var(--rp-rose-light) !important;
+}
+
+#chatbot-window,
+.chatbot {
+  background: linear-gradient(135deg, var(--rp-rose-light), var(--rp-rose-dark)) !important;
+  box-shadow: 0 10px 30px rgba(200,142,122,.22) !important;
+}
+
+#chatbot-window .text-rattoo-pink,
+.chatbot .text-rattoo-pink {
+  color: #2a1813 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rp-bg) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rp-rose-dark) !important;
+  border-radius: 999px !important;
+}
+
+@media (max-width: 900px) {
+  #navbar .font-tattoo {
+    font-size: 1rem !important;
+  }
+
+  #accueil h1 {
+    font-size: clamp(3rem, 12vw, 5.4rem) !important;
+  }
+
+  #galerie .group.relative {
+    transform: none !important;
+  }
+
+  #cookie-banner p {
+    line-height: 1.45 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

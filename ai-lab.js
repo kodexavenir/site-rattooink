@@ -85,22 +85,38 @@
     button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Création…';
     setState('loading');
 
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 70_000);
+
     try {
-      const response = await fetch('/api/generate-image', {
+      const response = await fetch('/api/generate', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt })
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({ prompt }),
+        signal: controller.signal
       });
-      const data = await response.json();
-      if (!response.ok || !data.imageDataUrl) throw new Error(data.error || 'Génération impossible.');
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.imageDataUrl) {
+        throw new Error(data.error || 'Génération impossible.');
+      }
 
       generatedImg.src = data.imageDataUrl;
       generatedImg.alt = `Concept RattooInk — ${prompt}`;
       setState('image');
     } catch (error) {
-      errorText.textContent = error instanceof Error ? error.message : 'Une erreur est survenue.';
+      if (error?.name === 'AbortError') {
+        errorText.textContent = 'La génération a pris trop de temps. Réessaie dans quelques instants.';
+      } else {
+        errorText.textContent = error instanceof Error ? error.message : 'Une erreur est survenue.';
+      }
       setState('error');
     } finally {
+      window.clearTimeout(timeoutId);
       button.disabled = false;
       button.innerHTML = '<i class="fas fa-bolt"></i> Créer';
     }

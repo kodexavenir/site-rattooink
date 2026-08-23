@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RattooInk | Salon de Tatouage</title>
     <meta name="description" content="RattooInk, le salon de tatouage avec du mordant. Découvrez notre univers noir, blanc et rose.">
-    
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="logo.png">
-    
     <meta property="og:title" content="RattooInk | Salon de Tatouage">
     <meta property="og:description" content="Le repaire de la ratonne effrontée. Flashes, projets personnalisés, univers noir, blanc et rose.">
     <meta property="og:image" content="logo.png">
     <meta property="og:type" content="website">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,16 +28,10 @@
       "priceRange": "$$"
     }
     </script>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS Setup -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -62,110 +53,36 @@
             }
         }
     </script>
-
     <style>
-        body {
-            background-color: #0c0c0c;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        
-        .text-glow {
-            text-shadow: 0 0 10px rgba(255, 51, 133, 0.5), 0 0 20px rgba(255, 51, 133, 0.3);
-        }
-
-        .border-glow {
-            box-shadow: 0 0 15px rgba(255, 51, 133, 0.4);
-        }
-
-        .hover-glow:hover {
-            box-shadow: 0 0 20px rgba(255, 51, 133, 0.8);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .bg-animated {
-            background: linear-gradient(45deg, #0c0c0c, #1a0510, #0c0c0c);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0c0c0c;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ff3385;
-            border-radius: 10px;
-        }
-
+        body { background-color: #0c0c0c; color: #ffffff; overflow-x: hidden; }
+        .text-glow { text-shadow: 0 0 10px rgba(255, 51, 133, 0.5), 0 0 20px rgba(255, 51, 133, 0.3); }
+        .border-glow { box-shadow: 0 0 15px rgba(255, 51, 133, 0.4); }
+        .hover-glow:hover { box-shadow: 0 0 20px rgba(255, 51, 133, 0.8); transform: translateY(-5px); transition: all 0.3s ease; }
+        .bg-animated { background: linear-gradient(45deg, #0c0c0c, #1a0510, #0c0c0c); background-size: 400% 400%; animation: gradientBG 15s ease infinite; }
+        @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0c0c0c; }
+        ::-webkit-scrollbar-thumb { background: #ff3385; border-radius: 10px; }
         .modal-active { overflow: hidden; }
         .lightbox-bg { background-color: rgba(12, 12, 12, 0.95); }
-
-        #chatbot-window {
-            box-shadow: 0 10px 40px rgba(255, 51, 133, 0.2);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .chat-bubble-user {
-            background-color: #1a1a1a;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            border-bottom-right-radius: 2px;
-        }
-        .chat-bubble-bot {
-            background-color: rgba(255, 51, 133, 0.15);
-            border: 1px solid rgba(255, 51, 133, 0.5);
-            color: white;
-            border-bottom-left-radius: 2px;
-        }
-        
-        .ai-loader {
-            width: 48px;
-            height: 48px;
-            border: 3px solid #1a1a1a;
-            border-bottom-color: #ff3385;
-            border-radius: 50%;
-            display: inline-block;
-            box-sizing: border-box;
-            animation: rotation 1s linear infinite;
-        }
-        @keyframes rotation {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .typing-indicator span {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background-color: #ff3385;
-            border-radius: 50%;
-            margin: 0 2px;
-            animation: bounce 1.4s infinite ease-in-out both;
-        }
+        #chatbot-window { box-shadow: 0 10px 40px rgba(255, 51, 133, 0.2); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .chat-bubble-user { background-color: #1a1a1a; border: 1px solid rgba(255, 255, 255, 0.1); color: white; border-bottom-right-radius: 2px; }
+        .chat-bubble-bot { background-color: rgba(255, 51, 133, 0.15); border: 1px solid rgba(255, 51, 133, 0.5); color: white; border-bottom-left-radius: 2px; }
+        .ai-loader { width: 48px; height: 48px; border: 3px solid #1a1a1a; border-bottom-color: #ff3385; border-radius: 50%; display: inline-block; box-sizing: border-box; animation: rotation 1s linear infinite; }
+        @keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .typing-indicator span { display: inline-block; width: 6px; height: 6px; background-color: #ff3385; border-radius: 50%; margin: 0 2px; animation: bounce 1.4s infinite ease-in-out both; }
         .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
         .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
-        }
+        @keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
     </style>
     <link rel="stylesheet" href="rattoo-premium.css">
+    <link rel="stylesheet" href="rattoo-reference-final.css">
 </head>
 <body class="font-sans antialiased bg-rattoo-dark relative">
 
     <div id="cookie-banner" class="fixed bottom-0 w-full bg-rattoo-gray border-t border-rattoo-pink/30 z-[100] transform translate-y-0 transition-transform duration-500 p-4 shadow-2xl">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p class="text-gray-300 text-sm text-center sm:text-left">
-                <i class="fas fa-cookie-bite text-rattoo-pink mr-2"></i> Nous utilisons des cookies pour assurer le bon fonctionnement du site et analyser notre trafic. C'est la loi, mais on promet de ne pas mordre.
-            </p>
+            <p class="text-gray-300 text-sm text-center sm:text-left"><i class="fas fa-cookie-bite text-rattoo-pink mr-2"></i> Nous utilisons des cookies pour assurer le bon fonctionnement du site et analyser notre trafic. C'est la loi, mais on promet de ne pas mordre.</p>
             <div class="flex gap-4 shrink-0">
                 <button onclick="acceptCookies()" class="bg-rattoo-pink text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-white hover:text-rattoo-pink transition-colors border border-transparent">J'accepte</button>
                 <button onclick="acceptCookies()" class="bg-transparent border border-white text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-white hover:text-rattoo-dark transition-colors">Je refuse</button>
@@ -178,27 +95,21 @@
     <nav class="fixed w-full z-50 transition-all duration-300 bg-rattoo-dark/90 backdrop-blur-md border-b border-rattoo-pink/20" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <img src="logo.png" alt="RattooInk Logo" class="w-12 h-12 rounded-full object-cover border-2 border-rattoo-pink bg-white border-glow hover:rotate-12 transition-transform duration-300">
                     <span class="font-tattoo text-xl tracking-wider text-white">RATTOO<span class="text-rattoo-pink">INK</span></span>
                 </div>
-
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#concept" class="text-gray-300 hover:text-rattoo-pink font-semibold uppercase tracking-widest text-sm transition-colors duration-300">L'Artiste</a>
                     <a href="#galerie" class="text-gray-300 hover:text-rattoo-pink font-semibold uppercase tracking-widest text-sm transition-colors duration-300">Galerie</a>
                     <a href="#ai-lab" class="text-gray-300 hover:text-rattoo-pink font-semibold uppercase tracking-widest text-sm transition-colors duration-300 flex items-center gap-2"><i class="fas fa-magic text-rattoo-pink"></i> Labo IA</a>
                     <a href="#contact" class="bg-rattoo-pink text-white px-6 py-2 rounded-full font-bold uppercase tracking-wide hover:bg-white hover:text-rattoo-pink transition-all duration-300 border-2 border-transparent hover:border-rattoo-pink border-glow">Réserver</a>
                 </div>
-
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-rattoo-pink focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-rattoo-pink focus:outline-none" aria-label="Ouvrir le menu"><i class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
-
         <div id="mobile-menu" class="hidden md:hidden bg-rattoo-dark border-b border-rattoo-pink/20 absolute w-full shadow-2xl">
             <div class="px-2 pt-2 pb-4 space-y-1 flex flex-col items-center">
                 <a href="#concept" class="block px-3 py-3 text-lg font-bold text-white hover:text-rattoo-pink">L'Artiste</a>
@@ -209,592 +120,97 @@
         </div>
     </nav>
 
-    <!-- ACCUEIL -->
     <section id="accueil" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-animated z-10 pt-20">
         <div class="absolute top-1/3 left-5 w-64 h-64 bg-rattoo-pink rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
         <div class="absolute bottom-1/4 right-5 w-80 h-80 bg-white rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
-        
         <div class="relative z-20 text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
-            
-            <div class="mb-8 inline-flex items-center gap-3 px-6 py-2 border border-rattoo-pink/50 rounded-full bg-black/50 backdrop-blur-sm shadow-[0_0_15px_rgba(255,51,133,0.3)]">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rattoo-pink opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-rattoo-pink"></span>
-                </span>
-                <span class="text-white font-bold tracking-widest uppercase text-sm">18 ans d'expertise dans la peau</span>
-            </div>
-
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 text-white leading-tight drop-shadow-2xl">
-                Masterclass <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-rattoo-pink to-rattoo-pink text-glow font-tattoo lowercase text-6xl md:text-8xl lg:text-[9rem] block -mt-2 md:-mt-6">sans limites</span>
-            </h1>
-            
-            <p class="mt-8 text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto mb-12 leading-relaxed">
-                Notre identité visuelle est <strong class="text-white">Noir, Blanc & Rose</strong>.<br>
-                Mais sous l'aiguille, nous maîtrisons <strong class="text-rattoo-pink font-bold border-b-2 border-rattoo-pink pb-1">toutes les couleurs, le réalisme absolu, et l'effet broderie</strong>.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center w-full max-w-2xl">
-                <a href="#contact" class="group px-8 py-4 bg-rattoo-pink text-white font-black rounded-full uppercase tracking-widest hover:bg-white hover:text-rattoo-pink transition-all duration-300 w-full sm:w-auto shadow-[0_0_20px_rgba(255,51,133,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] flex items-center justify-center gap-3 transform hover:-translate-y-1">
-                    Prendre Rendez-vous
-                </a>
-                <a href="#galerie" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full uppercase tracking-widest hover:bg-white hover:text-rattoo-dark transition-all duration-300 w-full sm:w-auto flex items-center justify-center transform hover:-translate-y-1">
-                    Voir le Portfolio
-                </a>
-            </div>
+            <div class="mb-8 inline-flex items-center gap-3 px-6 py-2 border border-rattoo-pink/50 rounded-full bg-black/50 backdrop-blur-sm shadow-[0_0_15px_rgba(255,51,133,0.3)]"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rattoo-pink opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-rattoo-pink"></span></span><span class="text-white font-bold tracking-widest uppercase text-sm">18 ans d'expertise dans la peau</span></div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 text-white leading-tight drop-shadow-2xl">Masterclass <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-rattoo-pink to-rattoo-pink text-glow font-tattoo lowercase text-6xl md:text-8xl lg:text-[9rem] block -mt-2 md:-mt-6">sans limites</span></h1>
+            <p class="mt-8 text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto mb-12 leading-relaxed">Notre identité visuelle est <strong class="text-white">Noir, Blanc & Rose</strong>.<br>Mais sous l'aiguille, nous maîtrisons <strong class="text-rattoo-pink font-bold border-b-2 border-rattoo-pink pb-1">toutes les couleurs, le réalisme absolu, et l'effet broderie</strong>.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center w-full max-w-2xl"><a href="#contact" class="group px-8 py-4 bg-rattoo-pink text-white font-black rounded-full uppercase tracking-widest hover:bg-white hover:text-rattoo-pink transition-all duration-300 w-full sm:w-auto shadow-[0_0_20px_rgba(255,51,133,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] flex items-center justify-center gap-3 transform hover:-translate-y-1">Prendre Rendez-vous</a><a href="#galerie" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full uppercase tracking-widest hover:bg-white hover:text-rattoo-dark transition-all duration-300 w-full sm:w-auto flex items-center justify-center transform hover:-translate-y-1">Voir le Portfolio</a></div>
         </div>
-
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#concept" class="text-gray-500 hover:text-rattoo-pink transition-colors">
-                <i class="fas fa-chevron-down text-3xl"></i>
-            </a>
-        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"><a href="#concept" class="text-gray-500 hover:text-rattoo-pink transition-colors"><i class="fas fa-chevron-down text-3xl"></i></a></div>
     </section>
 
-    <!-- CONCEPT / ARTISTE -->
     <section id="concept" class="py-24 bg-rattoo-dark relative z-10 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                
-                <div class="relative flex justify-center items-center order-2 md:order-1">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-rattoo-pink/20 to-transparent rounded-full blur-[80px] animate-pulse"></div>
-                    <div class="relative w-72 h-72 md:w-[450px] md:h-[450px] rounded-full bg-black border border-rattoo-pink/30 shadow-[0_0_50px_rgba(255,51,133,0.15)] flex flex-col items-center justify-center overflow-hidden group p-2">
-                        <img src="logo.png" alt="Logo Officiel RattooInk" class="w-full h-full object-cover rounded-full transform group-hover:scale-105 transition-transform duration-700 bg-white">
-                        <div class="absolute bottom-10 right-10 text-rattoo-pink text-4xl animate-bounce drop-shadow-lg text-glow z-20 opacity-50">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-1 md:order-2 space-y-6">
-                    <h2 class="text-4xl md:text-6xl font-black uppercase text-white leading-none">
-                        L'Artiste <br>
-                        <span class="text-rattoo-pink font-tattoo text-5xl md:text-7xl lowercase align-middle">Déchaînée</span>
-                    </h2>
-                    <div class="w-24 h-2 bg-rattoo-pink rounded-full mb-8"></div>
-                    
-                    <p class="text-gray-300 text-xl leading-relaxed font-light">
-                        Derrière <strong class="text-white font-bold">RattooInk</strong> et sa mascotte effrontée se cache une véritable experte de l'encrage. Avec <strong class="text-rattoo-pink font-bold border-b border-rattoo-pink">18 ans d'expérience</strong> à son compte, c'est l'assurance d'une technique affûtée à la perfection.
-                    </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mt-4">
-                        Aujourd'hui, c'est un nouveau départ. Un nouveau nom, une identité visuelle radicale (Noir, Blanc, Rose), mais une promesse artistique intacte : relever tous les défis.
-                    </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mt-4">
-                        Des couleurs vibrantes au portrait réaliste de Chucky, en passant par des textures de broderie Harley hallucinantes, tout est possible sous son aiguille.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                        <div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5">
-                            <i class="fas fa-palette text-rattoo-pink text-3xl mr-4 w-8 text-center"></i>
-                            <span class="font-bold">Maîtrise des Couleurs</span>
-                        </div>
-                        <div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5">
-                            <i class="fas fa-camera text-rattoo-pink text-3xl mr-4 w-8 text-center"></i>
-                            <span class="font-bold">Réalisme & Textures</span>
-                        </div>
-                        <div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5">
-                            <i class="fas fa-shield-alt text-rattoo-pink text-3xl mr-4 w-8 text-center"></i>
-                            <span class="font-bold">Normes REACH</span>
-                        </div>
-                        <div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5">
-                            <i class="fas fa-heart text-rattoo-pink text-3xl mr-4 w-8 text-center"></i>
-                            <span class="font-bold">Lieu Safe & Bienveillant</span>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="relative flex justify-center items-center order-2 md:order-1"><div class="absolute inset-0 bg-gradient-to-tr from-rattoo-pink/20 to-transparent rounded-full blur-[80px] animate-pulse"></div><div class="relative w-72 h-72 md:w-[450px] md:h-[450px] rounded-full bg-black border border-rattoo-pink/30 shadow-[0_0_50px_rgba(255,51,133,0.15)] flex flex-col items-center justify-center overflow-hidden group p-2"><img src="logo.png" alt="Logo Officiel RattooInk" class="w-full h-full object-cover rounded-full transform group-hover:scale-105 transition-transform duration-700 bg-white"></div></div>
+                <div class="order-1 md:order-2 space-y-6"><h2 class="text-4xl md:text-6xl font-black uppercase text-white leading-none">L'Artiste <br><span class="text-rattoo-pink font-tattoo text-5xl md:text-7xl lowercase align-middle">Déchaînée</span></h2><div class="w-24 h-2 bg-rattoo-pink rounded-full mb-8"></div><p class="text-gray-300 text-xl leading-relaxed font-light">Derrière <strong class="text-white font-bold">RattooInk</strong> et sa mascotte effrontée se cache une véritable experte de l'encrage. Avec <strong class="text-rattoo-pink font-bold border-b border-rattoo-pink">18 ans d'expérience</strong> à son compte, c'est l'assurance d'une technique affûtée à la perfection.</p><p class="text-gray-400 text-lg leading-relaxed mt-4">Aujourd'hui, c'est un nouveau départ. Un nouveau nom, une identité visuelle radicale (Noir, Blanc, Rose), mais une promesse artistique intacte : relever tous les défis.</p><p class="text-gray-400 text-lg leading-relaxed mt-4">Des couleurs vibrantes au portrait réaliste de Chucky, en passant par des textures de broderie Harley hallucinantes, tout est possible sous son aiguille.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8"><div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5"><i class="fas fa-palette text-rattoo-pink text-3xl mr-4 w-8 text-center"></i><span class="font-bold">Maîtrise des Couleurs</span></div><div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5"><i class="fas fa-camera text-rattoo-pink text-3xl mr-4 w-8 text-center"></i><span class="font-bold">Réalisme & Textures</span></div><div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5"><i class="fas fa-shield-alt text-rattoo-pink text-3xl mr-4 w-8 text-center"></i><span class="font-bold">Normes REACH</span></div><div class="flex items-center text-white bg-black/50 p-4 rounded-xl border border-white/5"><i class="fas fa-heart text-rattoo-pink text-3xl mr-4 w-8 text-center"></i><span class="font-bold">Lieu Safe & Bienveillant</span></div></div></div>
             </div>
         </div>
     </section>
 
-    <!-- GALERIE -->
     <section id="galerie" class="py-24 bg-rattoo-gray relative z-10 border-t border-b border-rattoo-pink/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-black uppercase mb-4 text-white">L'<span class="text-rattoo-pink">Œuvre</span></h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">18 ans de perfectionnement. Découvrez quelques-unes de nos réalisations : du réalisme, de la couleur, et nos fameux effets brodés.</p>
-            </div>
-
+            <div class="text-center mb-16"><h2 class="text-4xl md:text-6xl font-black uppercase mb-4 text-white">L'<span class="text-rattoo-pink">Œuvre</span></h2><p class="text-gray-400 text-lg max-w-2xl mx-auto">18 ans de perfectionnement. Découvrez quelques-unes de nos réalisations : du réalisme, de la couleur, et nos fameux effets brodés.</p></div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)">
-                    <img src="aigle.jpg" alt="Aigle Harley" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
-                        <span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Aigle Harley</span>
-                        <span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Effet texture & Cuir</span>
-                    </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)">
-                    <img src="broderie.jpg" alt="Écusson Harley" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
-                        <span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Écusson Harley</span>
-                        <span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Réalisme & Effet Brodé</span>
-                    </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)">
-                    <img src="dino.jpg" alt="Dino Mignon" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
-                        <span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Dino Kawaii</span>
-                        <span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Couleurs vibrantes</span>
-                    </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)">
-                    <img src="papillon.jpg" alt="Papillon" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
-                        <span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Papillon Mort de Tête</span>
-                        <span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Symétrie & Placement Crâne</span>
-                    </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)">
-                    <img src="chucky.jpg" alt="Chucky" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
-                        <span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Chucky</span>
-                        <span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Portrait Réaliste Couleur</span>
-                    </div>
-                </div>
-                
-                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)">
-                    <img src="indien.jpg" alt="Coiffe Indienne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none">
-                        <span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Coiffe Indienne</span>
-                        <span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Réalisme Noir & Gris</span>
-                    </div>
-                </div>
-
+                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)"><img src="aigle.jpg" alt="Aigle Harley" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none"><span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Aigle Harley</span><span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Effet texture & Cuir</span></div></div>
+                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)"><img src="broderie.jpg" alt="Écusson Harley" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none"><span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Écusson Harley</span><span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Réalisme & Effet Brodé</span></div></div>
+                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)"><img src="dino.jpg" alt="Dino Mignon" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none"><span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Dino Kawaii</span><span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Couleurs vibrantes</span></div></div>
+                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)"><img src="papillon.jpg" alt="Papillon" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none"><span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Papillon Mort de Tête</span><span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Symétrie & Placement Crâne</span></div></div>
+                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)"><img src="chucky.jpg" alt="Chucky" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none"><span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Chucky</span><span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Portrait Réaliste Couleur</span></div></div>
+                <div class="group relative rounded-xl overflow-hidden bg-rattoo-dark aspect-square hover-glow cursor-pointer shadow-2xl" onclick="openLightbox(this)"><img src="indien.jpg" alt="Coiffe Indienne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 pointer-events-none"><span class="text-rattoo-pink font-tattoo text-2xl drop-shadow-md">Coiffe Indienne</span><span class="text-white font-bold uppercase text-sm tracking-widest mt-2">Réalisme Noir & Gris</span></div></div>
             </div>
-            
-            <div class="mt-16 text-center">
-                <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-3 text-white hover:text-rattoo-pink font-black uppercase tracking-widest transition-colors border-b-2 border-rattoo-pink pb-2 text-xl">
-                    <i class="fab fa-instagram text-3xl"></i> Voir plus sur Instagram
-                </a>
-            </div>
+            <div class="mt-16 text-center"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-white hover:text-rattoo-pink font-black uppercase tracking-widest transition-colors border-b-2 border-rattoo-pink pb-2 text-xl"><i class="fab fa-instagram text-3xl"></i> Voir plus sur Instagram</a></div>
         </div>
     </section>
 
-    <!-- SECTION LABO IA ISOLÉE -->
     <section id="ai-lab" class="py-32 relative z-20 bg-black">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 pointer-events-none"></div>
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-full bg-rattoo-pink/10 blur-[120px] rounded-full pointer-events-none"></div>
-
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            
             <div class="bg-[#0a0a0a]/80 backdrop-blur-2xl border border-rattoo-pink/40 rounded-[2rem] p-8 md:p-16 shadow-[0_0_80px_rgba(255,51,133,0.15)] relative overflow-hidden group">
-                
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-rattoo-pink to-transparent opacity-100"></div>
-
                 <div class="text-center mb-12 relative z-10">
-                    <div class="inline-flex items-center justify-center w-20 h-20 bg-black rounded-full mb-6 border border-rattoo-pink/50 shadow-[0_0_30px_rgba(255,51,133,0.4)]">
-                        <i class="fas fa-robot text-rattoo-pink text-4xl animate-pulse"></i>
-                    </div>
-                    <h2 class="text-5xl md:text-7xl font-black uppercase mb-4 text-white tracking-tight">
-                        La Machine à <span class="text-transparent bg-clip-text bg-gradient-to-r from-rattoo-pink to-white text-glow font-tattoo lowercase">Rêves</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
-                        Notre I.A. générative exclusive. Décris le projet de tes rêves avec tes mots. Que ce soit en couleur, en noir et gris, du réalisme ou de la broderie, l'I.A. de RattooInk te génère un croquis unique pour en discuter avec l'artiste.
-                    </p>
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-black rounded-full mb-6 border border-rattoo-pink/50 shadow-[0_0_30px_rgba(255,51,133,0.4)]"><i class="fas fa-robot text-rattoo-pink text-4xl animate-pulse"></i></div>
+                    <h2 class="text-5xl md:text-7xl font-black uppercase mb-4 text-white tracking-tight">La Machine à <span class="text-transparent bg-clip-text bg-gradient-to-r from-rattoo-pink to-white text-glow font-tattoo lowercase">Rêves</span></h2>
+                    <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">Notre I.A. générative exclusive. Décris le projet de tes rêves avec tes mots. Que ce soit en couleur, en noir et gris, du réalisme ou de la broderie, l'I.A. de RattooInk te génère un croquis unique pour en discuter avec l'artiste.</p>
                 </div>
-
                 <div class="max-w-4xl mx-auto relative z-10">
                     <div class="flex flex-col md:flex-row gap-4 bg-black p-3 rounded-2xl border border-white/10 shadow-2xl focus-within:border-rattoo-pink/70 focus-within:shadow-[0_0_40px_rgba(255,51,133,0.3)] transition-all duration-500">
-                        <div class="flex-1 flex items-center px-4">
-                            <i class="fas fa-pen-nib text-rattoo-pink text-xl mr-4"></i>
-                            <input type="text" id="ai-prompt" placeholder="Ex: Un portrait de pirate hyper réaliste en noir et gris..." 
-                                   class="w-full bg-transparent border-none text-white focus:outline-none focus:ring-0 text-lg md:text-xl placeholder-gray-600 py-4">
-                        </div>
-                        <button id="generate-btn" class="bg-rattoo-pink text-white px-10 py-5 rounded-xl font-black uppercase tracking-widest text-lg hover:bg-white hover:text-rattoo-pink transition-all duration-300 flex-shrink-0 flex items-center justify-center gap-3 transform hover:scale-105">
-                            <i class="fas fa-bolt"></i> Créer
-                        </button>
+                        <div class="flex-1 flex items-center px-4"><i class="fas fa-pen-nib text-rattoo-pink text-xl mr-4"></i><input type="text" id="ai-prompt" placeholder="Ex: Un portrait de pirate hyper réaliste en noir et gris..." class="w-full bg-transparent border-none text-white focus:outline-none focus:ring-0 text-lg md:text-xl placeholder-gray-600 py-4"></div>
+                        <button id="generate-btn" class="bg-rattoo-pink text-white px-10 py-5 rounded-xl font-black uppercase tracking-widest text-lg hover:bg-white hover:text-rattoo-pink transition-all duration-300 flex-shrink-0 flex items-center justify-center gap-3 transform hover:scale-105"><i class="fas fa-bolt"></i> Créer</button>
                     </div>
-
                     <div id="ai-result-area" class="mt-12 hidden flex-col items-center justify-center min-h-[400px] border-2 border-dashed border-rattoo-pink/30 rounded-[2rem] bg-black/40 p-8 transition-all duration-500">
-                        
-                        <div id="ai-loading" class="hidden flex-col items-center justify-center space-y-6">
-                            <div class="w-16 h-16 border-4 border-rattoo-dark border-t-rattoo-pink rounded-full animate-spin shadow-[0_0_30px_rgba(255,51,133,0.5)]"></div>
-                            <p class="text-white font-black uppercase tracking-widest animate-pulse text-xl">L'I.A. dessine ton projet...</p>
-                        </div>
-
-                        <div id="ai-image-container" class="hidden w-full max-w-lg relative group">
-                            <div class="absolute -inset-1 bg-gradient-to-r from-rattoo-pink to-white rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                            <img id="ai-generated-img" src="" alt="Génération IA" class="relative w-full h-auto rounded-xl shadow-2xl cursor-pointer ring-1 ring-white/10" onclick="openLightbox(this)">
-                            
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center rounded-xl pointer-events-none z-10">
-                                <i class="fas fa-expand text-4xl text-white mb-2 drop-shadow-lg"></i>
-                                <span class="text-white font-black uppercase tracking-widest">Agrandir</span>
-                            </div>
-                        </div>
-                        
-                        <div id="ai-error" class="hidden flex-col items-center text-red-500">
-                            <i class="fas fa-exclamation-triangle text-5xl mb-4"></i> 
-                            <span id="ai-error-text" class="font-bold text-xl text-center">Une erreur est survenue lors de la connexion.</span>
-                        </div>
+                        <div id="ai-loading" class="hidden flex-col items-center justify-center space-y-6"><div class="w-16 h-16 border-4 border-rattoo-dark border-t-rattoo-pink rounded-full animate-spin shadow-[0_0_30px_rgba(255,51,133,0.5)]"></div><p class="text-white font-black uppercase tracking-widest animate-pulse text-xl">L'I.A. dessine ton projet...</p></div>
+                        <div id="ai-image-container" class="hidden w-full max-w-lg relative group"><div class="absolute -inset-1 bg-gradient-to-r from-rattoo-pink to-white rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div><img id="ai-generated-img" src="" alt="Génération IA" class="relative w-full h-auto rounded-xl shadow-2xl cursor-pointer ring-1 ring-white/10" onclick="openLightbox(this)"><div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center rounded-xl pointer-events-none z-10"><i class="fas fa-expand text-4xl text-white mb-2 drop-shadow-lg"></i><span class="text-white font-black uppercase tracking-widest">Agrandir</span></div></div>
+                        <div id="ai-error" class="hidden flex-col items-center text-red-500"><i class="fas fa-exclamation-triangle text-5xl mb-4"></i><span id="ai-error-text" class="font-bold text-xl text-center">Une erreur est survenue lors de la connexion.</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-24 bg-rattoo-dark relative z-10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase mb-4">Questions <span class="text-rattoo-pink">Fréquentes</span></h2>
-            </div>
+    <section id="faq" class="py-24 bg-rattoo-dark relative z-10"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-16"><h2 class="text-4xl font-black uppercase mb-4">Questions <span class="text-rattoo-pink">Fréquentes</span></h2></div><div class="space-y-6"><div class="bg-rattoo-gray rounded-xl p-6 border border-white/5 hover:border-rattoo-pink/50 transition-colors"><h3 class="text-xl font-bold text-white mb-3 flex items-center gap-3"><i class="fas fa-circle text-rattoo-pink text-xs"></i> Faites-vous uniquement du tatouage noir, blanc et rose ?</h3><p class="text-gray-400 leading-relaxed">Absolument pas ! Le noir, le blanc et le rose vif constituent l'identité de la marque RattooInk. Mais la tatoueuse réalise des tatouages de toutes les couleurs (réalisme, aquarelle, etc.) forte de 18 ans d'expertise.</p></div><div class="bg-rattoo-gray rounded-xl p-6 border border-white/5 hover:border-rattoo-pink/50 transition-colors"><h3 class="text-xl font-bold text-white mb-3 flex items-center gap-3"><i class="fas fa-circle text-rattoo-pink text-xs"></i> Comment réserver un flash ou un projet ?</h3><p class="text-gray-400 leading-relaxed">Remplissez le formulaire de contact en bas de page en mentionnant vos idées (ou en utilisant l'idée générée par notre I.A.), ou envoyez-nous un DM sur Instagram.</p></div><div class="bg-rattoo-gray rounded-xl p-6 border border-white/5 hover:border-rattoo-pink/50 transition-colors"><h3 class="text-xl font-bold text-white mb-3 flex items-center gap-3"><i class="fas fa-circle text-rattoo-pink text-xs"></i> Quel est le tarif de départ ?</h3><p class="text-gray-400 leading-relaxed">La sortie d'aiguille (tarif minimum) est fixée à 80€. Le prix final dépend de la taille, de l'emplacement et de la complexité du design.</p></div></div></div></section>
 
-            <div class="space-y-6">
-                <div class="bg-rattoo-gray rounded-xl p-6 border border-white/5 hover:border-rattoo-pink/50 transition-colors">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
-                        <i class="fas fa-circle text-rattoo-pink text-xs"></i> 
-                        Faites-vous uniquement du tatouage noir, blanc et rose ?
-                    </h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Absolument pas ! Le noir, le blanc et le rose vif constituent l'identité de la marque RattooInk. Mais la tatoueuse réalise des tatouages de toutes les couleurs (réalisme, aquarelle, etc.) forte de 18 ans d'expertise.
-                    </p>
-                </div>
-                <div class="bg-rattoo-gray rounded-xl p-6 border border-white/5 hover:border-rattoo-pink/50 transition-colors">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
-                        <i class="fas fa-circle text-rattoo-pink text-xs"></i> 
-                        Comment réserver un flash ou un projet ?
-                    </h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Remplissez le formulaire de contact en bas de page en mentionnant vos idées (ou en utilisant l'idée générée par notre I.A.), ou envoyez-nous un DM sur Instagram.
-                    </p>
-                </div>
-                <div class="bg-rattoo-gray rounded-xl p-6 border border-white/5 hover:border-rattoo-pink/50 transition-colors">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-3">
-                        <i class="fas fa-circle text-rattoo-pink text-xs"></i> 
-                        Quel est le tarif de départ ?
-                    </h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        La sortie d'aiguille (tarif minimum) est fixée à 80€. Le prix final dépend de la taille, de l'emplacement et de la complexité du design.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="contact" class="py-24 bg-rattoo-gray relative z-10 border-t border-rattoo-pink/20"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 lg:grid-cols-2 gap-16"><div><h2 class="text-4xl md:text-5xl font-black uppercase mb-6">Passe à l'<span class="text-rattoo-pink">Action</span></h2><p class="text-gray-300 text-lg mb-10">Prêt(e) à te faire encrer ? Que ce soit pour adopter notre ratonne effrontée ou pour un projet sur mesure, décris-nous ton idée.</p><div class="space-y-6"><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-rattoo-dark border border-rattoo-pink flex items-center justify-center text-rattoo-pink flex-shrink-0"><i class="fas fa-map-marker-alt text-xl"></i></div><div><h4 class="font-bold text-white text-lg">Le Repaire</h4><p class="text-gray-400">123 Rue de l'Encre, 75000 Paris<br><span class="text-sm text-rattoo-pink italic">Sur rendez-vous uniquement</span></p></div></div><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-rattoo-dark border border-rattoo-pink flex items-center justify-center text-rattoo-pink flex-shrink-0"><i class="fas fa-envelope text-xl"></i></div><div><h4 class="font-bold text-white text-lg">Email</h4><p class="text-gray-400">contact@rattooink.com</p></div></div><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-rattoo-dark border border-rattoo-pink flex items-center justify-center text-rattoo-pink flex-shrink-0"><i class="fab fa-instagram text-xl"></i></div><div><h4 class="font-bold text-white text-lg">Réseaux</h4><p class="text-gray-400">@RattooInk</p></div></div></div></div><div class="bg-rattoo-dark p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden"><form class="space-y-6 relative z-10" onsubmit="event.preventDefault(); showSuccessMessage();"><div class="grid grid-cols-1 sm:grid-cols-2 gap-6"><div><label for="name" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Nom / Prénom</label><input type="text" id="name" required class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors"></div><div><label for="email" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Email</label><input type="email" id="email" required class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors"></div></div><div><label for="type" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Type de projet</label><select id="type" class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors appearance-none"><option>Flash "Ratonne"</option><option>Autre Flash</option><option>Projet Personnalisé</option></select></div><div><label for="message" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Description (Emplacement, Taille, Idée)</label><textarea id="message" rows="4" required class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors resize-none"></textarea></div><div class="flex items-start mt-4"><div class="flex items-center h-5"><input id="rgpd" type="checkbox" required class="w-4 h-4 bg-rattoo-gray border-white/10 rounded text-rattoo-pink focus:ring-rattoo-pink focus:ring-2 accent-rattoo-pink cursor-pointer"></div><label for="rgpd" class="ml-3 text-sm text-gray-400 cursor-pointer">J'accepte que mes données soient traitées pour me recontacter. Voir nos <button type="button" onclick="openLegal('cgv')" class="text-rattoo-pink hover:underline focus:outline-none">CGV / Mentions Légales</button>.</label></div><button type="submit" class="w-full bg-rattoo-pink text-white font-bold uppercase tracking-widest py-4 rounded-lg hover:bg-white hover:text-rattoo-pink transition-colors duration-300 border-2 border-transparent hover:border-rattoo-pink mt-6">Envoyer la demande</button><div id="success-message" class="hidden mt-4 p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-400 text-center text-sm font-bold">Message envoyé ! La ratonne a bien reçu ton mot, on te répond vite.</div></form></div></div></div></section>
 
-    <section id="contact" class="py-24 bg-rattoo-gray relative z-10 border-t border-rattoo-pink/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                
-                <div>
-                    <h2 class="text-4xl md:text-5xl font-black uppercase mb-6">Passe à l'<span class="text-rattoo-pink">Action</span></h2>
-                    <p class="text-gray-300 text-lg mb-10">
-                        Prêt(e) à te faire encrer ? Que ce soit pour adopter notre ratonne effrontée ou pour un projet sur mesure, décris-nous ton idée.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-rattoo-dark border border-rattoo-pink flex items-center justify-center text-rattoo-pink flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-lg">Le Repaire</h4>
-                                <p class="text-gray-400">123 Rue de l'Encre, 75000 Paris<br><span class="text-sm text-rattoo-pink italic">Sur rendez-vous uniquement</span></p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-rattoo-dark border border-rattoo-pink flex items-center justify-center text-rattoo-pink flex-shrink-0">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-lg">Email</h4>
-                                <p class="text-gray-400">contact@rattooink.com</p>
-                            </div>
-                        </div>
+    <footer class="bg-black py-12 border-t border-rattoo-pink/30 relative z-10 text-center"><div class="max-w-7xl mx-auto px-4"><div class="flex flex-col items-center justify-center space-y-6"><img src="logo.png" alt="Logo RattooInk" class="w-16 h-16 rounded-full bg-white border-2 border-rattoo-pink object-cover hover:rotate-12 transition-transform duration-300"><p class="font-tattoo text-2xl text-white">RATTOO<span class="text-rattoo-pink">INK</span></p><div class="flex space-x-6 text-gray-400"><a href="#" class="hover:text-rattoo-pink transition-colors"><i class="fab fa-instagram text-2xl"></i></a><a href="#" class="hover:text-rattoo-pink transition-colors"><i class="fab fa-tiktok text-2xl"></i></a><a href="#" class="hover:text-rattoo-pink transition-colors"><i class="fab fa-facebook text-2xl"></i></a></div><div class="flex space-x-4 text-xs text-gray-500 mt-4"><button onclick="openLegal('mentions')" class="hover:text-white transition-colors uppercase tracking-wider focus:outline-none">Mentions Légales</button><span>|</span><button onclick="openLegal('cgv')" class="hover:text-white transition-colors uppercase tracking-wider focus:outline-none">Conditions Générales (CGV)</button></div><p class="text-gray-600 text-sm mt-4">&copy; 2026 RattooInk. Tous droits réservés. L'art impertinent. <i class="fas fa-heart text-rattoo-pink text-xs mx-1"></i></p></div></div></footer>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-rattoo-dark border border-rattoo-pink flex items-center justify-center text-rattoo-pink flex-shrink-0">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-lg">Réseaux</h4>
-                                <p class="text-gray-400">@RattooInk</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center lightbox-bg opacity-0 transition-opacity duration-300 p-4"><button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-rattoo-pink text-5xl focus:outline-none transition-colors drop-shadow-md">&times;</button><img id="lightbox-img" src="" alt="Tattoo Zoom" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-[0_0_30px_rgba(255,51,133,0.2)] border border-white/10"><p id="lightbox-caption" class="text-rattoo-pink font-tattoo text-3xl mt-6 text-center text-glow"></p></div>
 
-                <div class="bg-rattoo-dark p-8 rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden">
-                    <div class="absolute -top-10 -right-10 text-rattoo-pink/5 text-9xl font-tattoo pointer-events-none">
-                        R
-                    </div>
+    <div id="legal-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300 p-4 md:p-10"><div class="bg-rattoo-dark w-full max-w-4xl max-h-[90vh] rounded-2xl border border-rattoo-pink/30 flex flex-col shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden relative"><div class="flex justify-between items-center p-6 border-b border-white/10 bg-black/50"><h3 id="legal-title" class="text-2xl font-black uppercase text-white tracking-widest"><span class="text-rattoo-pink font-tattoo text-xl lowercase mr-2">Les</span> Règles</h3><button onclick="closeLegal()" class="text-gray-400 hover:text-rattoo-pink text-4xl focus:outline-none transition-colors">&times;</button></div><div class="p-6 md:p-8 overflow-y-auto flex-1 text-gray-300 space-y-8 bg-rattoo-dark"><div id="content-mentions" class="hidden space-y-6"><p class="italic text-gray-500 mb-6">Ces mentions légales protègent votre marque et informent vos clients sur l'identité de l'entreprise.</p><div><h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">1. Éditeur du site</h4><p class="text-gray-400">Le site RattooInk est édité par [VOTRE NOM/SOCIÉTÉ], domicilié(e) au 123 Rue de l'Encre, 75000 Paris.<br>SIRET : [À REMPLIR LORS DE LA CRÉATION DE L'ENTREPRISE].</p></div><div><h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">3. Propriété Intellectuelle</h4><p class="text-gray-400">L'ensemble des dessins, flashes, logos (notamment la Ratonne RattooInk) et photographies présents sur ce site sont la propriété exclusive de RattooInk. Toute reproduction, même partielle, est strictement interdite et passible de poursuites pénales.</p></div></div><div id="content-cgv" class="hidden space-y-6"><p class="italic text-gray-500 mb-6">Conditions Générales de Vente : le contrat clair entre vous et vos clients pour éviter tout litige.</p><div><h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">1. Prise de Rendez-vous et Arrhes</h4><p class="text-gray-400">La réservation d'une séance de tatouage ou d'un flash nécessite le versement d'arrhes non-remboursables. Ces arrhes bloquent le dessin (pour un flash unique) et le créneau horaire. En cas d'annulation ou de report moins de 48h à l'avance, les arrhes sont définitivement perdues pour compenser le temps de travail perdu.</p></div><div><h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">2. Hygiène, Santé et Sécurité</h4><p class="text-gray-400">Le salon respecte strictement les normes d'hygiène et de salubrité en vigueur. Le matériel pénétrant est à usage unique et stérile. Les encres utilisées respectent la norme européenne REACH. Le client s'engage à signaler toute allergie, maladie de peau, diabète ou grossesse avant la prise de rendez-vous. Nous ne tatouons pas les personnes mineures.</p></div><div><h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">3. Tarifs et Paiement</h4><p class="text-gray-400">Le tarif de base (sortie d'aiguille) est fixé à 80€. Le prix final est évalué en fonction de la taille, de l'emplacement et de la complexité du design. Le solde du règlement s'effectue le jour de la séance.</p></div></div></div></div></div>
 
-                    <form class="space-y-6 relative z-10" onsubmit="event.preventDefault(); showSuccessMessage();">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Nom / Prénom</label>
-                                <input type="text" id="name" required class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Email</label>
-                                <input type="email" id="email" required class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="type" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Type de projet</label>
-                            <select id="type" class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors appearance-none">
-                                <option>Flash "Ratonne"</option>
-                                <option>Autre Flash</option>
-                                <option>Projet Personnalisé</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-wide">Description (Emplacement, Taille, Idée)</label>
-                            <textarea id="message" rows="4" required class="w-full bg-rattoo-gray border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rattoo-pink focus:ring-1 focus:ring-rattoo-pink transition-colors resize-none"></textarea>
-                        </div>
-
-                        <div class="flex items-start mt-4">
-                            <div class="flex items-center h-5">
-                                <input id="rgpd" type="checkbox" required class="w-4 h-4 bg-rattoo-gray border-white/10 rounded text-rattoo-pink focus:ring-rattoo-pink focus:ring-2 accent-rattoo-pink cursor-pointer">
-                            </div>
-                            <label for="rgpd" class="ml-3 text-sm text-gray-400 cursor-pointer">
-                                J'accepte que mes données soient traitées pour me recontacter. Voir nos <button type="button" onclick="openLegal('cgv')" class="text-rattoo-pink hover:underline focus:outline-none">CGV / Mentions Légales</button>.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="w-full bg-rattoo-pink text-white font-bold uppercase tracking-widest py-4 rounded-lg hover:bg-white hover:text-rattoo-pink transition-colors duration-300 border-2 border-transparent hover:border-rattoo-pink mt-6">
-                            Envoyer la demande
-                        </button>
-
-                        <div id="success-message" class="hidden mt-4 p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-400 text-center text-sm font-bold">
-                            Message envoyé ! La ratonne a bien reçu ton mot, on te répond vite.
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-rattoo-pink/30 relative z-10 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col items-center justify-center space-y-6">
-                <img src="logo.png" alt="Logo RattooInk" class="w-16 h-16 rounded-full bg-white border-2 border-rattoo-pink object-cover hover:rotate-12 transition-transform duration-300">
-                
-                <p class="font-tattoo text-2xl text-white">RATTOO<span class="text-rattoo-pink">INK</span></p>
-                
-                <div class="flex space-x-6 text-gray-400">
-                    <a href="#" class="hover:text-rattoo-pink transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-                    <a href="#" class="hover:text-rattoo-pink transition-colors"><i class="fab fa-tiktok text-2xl"></i></a>
-                    <a href="#" class="hover:text-rattoo-pink transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
-                </div>
-                
-                <div class="flex space-x-4 text-xs text-gray-500 mt-4">
-                    <button onclick="openLegal('mentions')" class="hover:text-white transition-colors uppercase tracking-wider focus:outline-none">Mentions Légales</button>
-                    <span>|</span>
-                    <button onclick="openLegal('cgv')" class="hover:text-white transition-colors uppercase tracking-wider focus:outline-none">Conditions Générales (CGV)</button>
-                </div>
-                
-                <p class="text-gray-600 text-sm mt-4">
-                    &copy; 2026 RattooInk. Tous droits réservés. L'art impertinent. <i class="fas fa-heart text-rattoo-pink text-xs mx-1"></i>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center lightbox-bg opacity-0 transition-opacity duration-300 p-4">
-        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-rattoo-pink text-5xl focus:outline-none transition-colors drop-shadow-md">&times;</button>
-        <img id="lightbox-img" src="" alt="Tattoo Zoom" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-[0_0_30px_rgba(255,51,133,0.2)] border border-white/10">
-        <p id="lightbox-caption" class="text-rattoo-pink font-tattoo text-3xl mt-6 text-center text-glow"></p>
-    </div>
-
-    <!-- Legal/CGV Modal -->
-    <div id="legal-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300 p-4 md:p-10">
-        <div class="bg-rattoo-dark w-full max-w-4xl max-h-[90vh] rounded-2xl border border-rattoo-pink/30 flex flex-col shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden relative">
-            
-            <div class="flex justify-between items-center p-6 border-b border-white/10 bg-black/50">
-                <h3 id="legal-title" class="text-2xl font-black uppercase text-white tracking-widest"><span class="text-rattoo-pink font-tattoo text-xl lowercase mr-2">Les</span> Règles</h3>
-                <button onclick="closeLegal()" class="text-gray-400 hover:text-rattoo-pink text-4xl focus:outline-none transition-colors">&times;</button>
-            </div>
-            
-            <div class="p-6 md:p-8 overflow-y-auto flex-1 text-gray-300 space-y-8 bg-rattoo-dark">
-                <!-- Mentions Légales Content -->
-                <div id="content-mentions" class="hidden space-y-6">
-                    <p class="italic text-gray-500 mb-6">Ces mentions légales protègent votre marque et informent vos clients sur l'identité de l'entreprise.</p>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">1. Éditeur du site</h4>
-                        <p class="text-gray-400">Le site RattooInk est édité par [VOTRE NOM/SOCIÉTÉ], domicilié(e) au 123 Rue de l'Encre, 75000 Paris.<br>SIRET : [À REMPLIR LORS DE LA CRÉATION DE L'ENTREPRISE].</p>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">3. Propriété Intellectuelle</h4>
-                        <p class="text-gray-400">L'ensemble des dessins, flashes, logos (notamment la Ratonne RattooInk) et photographies présents sur ce site sont la propriété exclusive de RattooInk. Toute reproduction, même partielle, est strictement interdite et passible de poursuites pénales.</p>
-                    </div>
-                </div>
-
-                <!-- CGV Content -->
-                <div id="content-cgv" class="hidden space-y-6">
-                    <p class="italic text-gray-500 mb-6">Conditions Générales de Vente : le contrat clair entre vous et vos clients pour éviter tout litige.</p>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">1. Prise de Rendez-vous et Arrhes</h4>
-                        <p class="text-gray-400">La réservation d'une séance de tatouage ou d'un flash nécessite le versement d'arrhes non-remboursables. Ces arrhes bloquent le dessin (pour un flash unique) et le créneau horaire. En cas d'annulation ou de report moins de 48h à l'avance, les arrhes sont définitivement perdues pour compenser le temps de travail perdu.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">2. Hygiène, Santé et Sécurité</h4>
-                        <p class="text-gray-400">Le salon respecte strictement les normes d'hygiène et de salubrité en vigueur. Le matériel pénétrant est à usage unique et stérile. Les encres utilisées respectent la norme européenne REACH. Le client s'engage à signaler toute allergie, maladie de peau, diabète ou grossesse avant la prise de rendez-vous. Nous ne tatouons pas les personnes mineures.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">3. Tarifs et Paiement</h4>
-                        <p class="text-gray-400">Le tarif de base (sortie d'aiguille) est fixé à 80€. Le prix final est évalué en fonction de la taille, de l'emplacement et de la complexité du design (les aplats noirs ou roses nécessitant plus de temps). Le solde du règlement s'effectue le jour de la séance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Chatbot Widget -->
-    <div id="chatbot-widget" class="fixed bottom-6 right-6 z-[90] flex flex-col items-end">
-        <div id="chatbot-window" class="hidden bg-rattoo-dark border border-rattoo-pink/30 rounded-2xl w-[90vw] sm:w-[350px] h-[500px] mb-4 flex-col overflow-hidden">
-            <div class="bg-black border-b border-white/10 p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="La Ratonne" class="w-10 h-10 rounded-full border border-rattoo-pink object-cover bg-white">
-                    <div>
-                        <h4 class="text-white font-bold text-sm">La Ratonne <i class="fas fa-check-circle text-rattoo-pink text-xs"></i></h4>
-                        <p class="text-gray-500 text-xs">Assistante Virtuelle</p>
-                    </div>
-                </div>
-                <button id="close-chat" class="text-gray-400 hover:text-rattoo-pink focus:outline-none"><i class="fas fa-times"></i></button>
-            </div>
-            
-            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-rattoo-gray/30 flex flex-col">
-                <div class="self-start max-w-[85%]">
-                    <div class="chat-bubble-bot p-3 rounded-2xl rounded-tl-sm shadow-sm text-sm">
-                        Salut humain ! 🐾 Je suis la mascotte du shop. Notre tatoueuse a 18 ans d'expérience au compteur. Tu as une question sur nos dispos, nos tarifs ou l'hygiène ? Crache le morceau !
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-3 bg-black border-t border-white/10 flex items-center gap-2">
-                <input type="text" id="chat-input" placeholder="Écris ton message..." 
-                       class="flex-1 bg-rattoo-gray border border-white/10 rounded-full px-4 py-2 text-white text-sm focus:outline-none focus:border-rattoo-pink transition-colors">
-                <button id="send-chat" class="w-10 h-10 rounded-full bg-rattoo-pink text-white flex items-center justify-center hover:bg-white hover:text-rattoo-pink transition-colors flex-shrink-0">
-                    <i class="fas fa-paper-plane text-sm"></i>
-                </button>
-            </div>
-        </div>
-
-        <button id="chatbot-toggle" class="w-16 h-16 rounded-full bg-rattoo-pink text-white text-2xl shadow-[0_0_20px_rgba(255,51,133,0.5)] hover:bg-white hover:text-rattoo-pink transition-all duration-300 flex items-center justify-center hover-glow relative">
-            <i class="fas fa-comment-dots"></i>
-            <span class="absolute top-0 right-0 w-4 h-4 bg-red-500 border-2 border-rattoo-dark rounded-full"></span>
-        </button>
-    </div>
+    <div id="chatbot-widget" class="fixed bottom-6 right-6 z-[90] flex flex-col items-end"><div id="chatbot-window" class="hidden bg-rattoo-dark border border-rattoo-pink/30 rounded-2xl w-[90vw] sm:w-[350px] h-[500px] mb-4 flex-col overflow-hidden"><div class="bg-black border-b border-white/10 p-4 flex items-center justify-between"><div class="flex items-center gap-3"><img src="logo.png" alt="La Ratonne" class="w-10 h-10 rounded-full border border-rattoo-pink object-cover bg-white"><div><h4 class="text-white font-bold text-sm">La Ratonne <i class="fas fa-check-circle text-rattoo-pink text-xs"></i></h4><p class="text-gray-500 text-xs">Assistante Virtuelle</p></div></div><button id="close-chat" class="text-gray-400 hover:text-rattoo-pink focus:outline-none"><i class="fas fa-times"></i></button></div><div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-rattoo-gray/30 flex flex-col"><div class="self-start max-w-[85%]"><div class="chat-bubble-bot p-3 rounded-2xl rounded-tl-sm shadow-sm text-sm">Salut humain ! 🐾 Je suis la mascotte du shop. Notre tatoueuse a 18 ans d'expérience au compteur. Tu as une question sur nos dispos, nos tarifs ou l'hygiène ? Crache le morceau !</div></div></div><div class="p-3 bg-black border-t border-white/10 flex items-center gap-2"><input type="text" id="chat-input" placeholder="Écris ton message..." class="flex-1 bg-rattoo-gray border border-white/10 rounded-full px-4 py-2 text-white text-sm focus:outline-none focus:border-rattoo-pink transition-colors"><button id="send-chat" class="w-10 h-10 rounded-full bg-rattoo-pink text-white flex items-center justify-center hover:bg-white hover:text-rattoo-pink transition-colors flex-shrink-0"><i class="fas fa-paper-plane text-sm"></i></button></div></div><button id="chatbot-toggle" class="w-16 h-16 rounded-full bg-rattoo-pink text-white text-2xl shadow-[0_0_20px_rgba(255,51,133,0.5)] hover:bg-white hover:text-rattoo-pink transition-all duration-300 flex items-center justify-center hover-glow relative"><i class="fas fa-comment-dots"></i><span class="absolute top-0 right-0 w-4 h-4 bg-red-500 border-2 border-rattoo-dark rounded-full"></span></button></div>
 
     <script>
-        // JS Basics
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => menu.classList.add('hidden'));
-        });
-
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) nav.classList.add('shadow-lg', 'shadow-rattoo-pink/10');
-            else nav.classList.remove('shadow-lg', 'shadow-rattoo-pink/10');
-        });
-
-        function acceptCookies() {
-            const banner = document.getElementById('cookie-banner');
-            banner.classList.add('translate-y-full');
-            setTimeout(() => banner.classList.add('hidden'), 500);
-        }
-
-        // Lightbox
+        if (btn && menu) { btn.addEventListener('click', () => menu.classList.toggle('hidden')); document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden'))); }
+        window.addEventListener('scroll', () => { const nav = document.getElementById('navbar'); if (nav) { if (window.scrollY > 50) nav.classList.add('shadow-lg', 'shadow-rattoo-pink/10'); else nav.classList.remove('shadow-lg', 'shadow-rattoo-pink/10'); } });
+        function acceptCookies() { const banner = document.getElementById('cookie-banner'); if (banner) { banner.classList.add('translate-y-full'); setTimeout(() => banner.classList.add('hidden'), 500); } }
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');
-
-        function openLightbox(element) {
-            const img = element.querySelector('img');
-            const caption = element.querySelector('.font-tattoo').innerText;
-            lightboxImg.src = img.src;
-            lightboxCaption.innerText = caption;
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
-            document.body.classList.add('modal-active');
-        }
-
-        function closeLightbox() {
-            lightbox.classList.add('opacity-0');
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-                lightbox.classList.remove('flex');
-                document.body.classList.remove('modal-active');
-                lightboxImg.src = ''; 
-            }, 300);
-        }
-
-        // Legal Modals
-        const legalModal = document.getElementById('legal-modal');
-        const contentMentions = document.getElementById('content-mentions');
-        const contentCgv = document.getElementById('content-cgv');
-        const legalTitle = document.getElementById('legal-title');
-
-        function openLegal(type) {
-            legalModal.classList.remove('hidden');
-            legalModal.classList.add('flex');
-            setTimeout(() => legalModal.classList.remove('opacity-0'), 10);
-            document.body.classList.add('modal-active');
-            if (type === 'mentions') {
-                legalTitle.innerHTML = '<span class="text-rattoo-pink font-tattoo text-xl lowercase mr-2">Les</span> Mentions Légales';
-                contentMentions.classList.remove('hidden');
-                contentCgv.classList.add('hidden');
-            } else if (type === 'cgv') {
-                legalTitle.innerHTML = '<span class="text-rattoo-pink font-tattoo text-xl lowercase mr-2">Les</span> CGV';
-                contentCgv.classList.remove('hidden');
-                contentMentions.classList.add('hidden');
-            }
-        }
-
-        function closeLegal() {
-            legalModal.classList.add('opacity-0');
-            setTimeout(() => {
-                legalModal.classList.add('hidden');
-                legalModal.classList.remove('flex');
-                document.body.classList.remove('modal-active');
-            }, 300);
-        }
-
-        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-        legalModal.addEventListener('click', (e) => { if (e.target === legalModal) closeLegal(); });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                if (!lightbox.classList.contains('hidden')) closeLightbox();
-                if (!legalModal.classList.contains('hidden')) closeLegal();
-            }
-        });
-
-        function showSuccessMessage() {
-            const msg = document.getElementById('success-message');
-            msg.classList.remove('hidden');
-            setTimeout(() => {
-                msg.classList.add('hidden');
-                document.querySelector('form').reset();
-            }, 5000);
-        }
-        
-        // Chatbot logic simplified to avoid errors while waiting for API key
-        const chatbotToggle = document.getElementById('chatbot-toggle');
-        const chatbotWindow = document.getElementById('chatbot-window');
-        const closeChat = document.getElementById('close-chat');
-        chatbotToggle.addEventListener('click', () => {
-            chatbotWindow.classList.toggle('hidden');
-            chatbotWindow.classList.toggle('flex');
-            chatbotToggle.querySelector('.bg-red-500').classList.add('hidden'); 
-        });
-        closeChat.addEventListener('click', () => {
-            chatbotWindow.classList.add('hidden');
-            chatbotWindow.classList.remove('flex');
-        });
+        function openLightbox(element) { const img = element.querySelector('img'); const captionNode = element.querySelector('.font-tattoo'); const caption = captionNode ? captionNode.innerText : ''; if (!img || !lightbox || !lightboxImg || !lightboxCaption) return; lightboxImg.src = img.src; lightboxCaption.innerText = caption; lightbox.classList.remove('hidden'); lightbox.classList.add('flex'); setTimeout(() => lightbox.classList.remove('opacity-0'), 10); document.body.classList.add('modal-active'); }
+        function closeLightbox() { if (!lightbox) return; lightbox.classList.add('opacity-0'); setTimeout(() => { lightbox.classList.add('hidden'); lightbox.classList.remove('flex'); document.body.classList.remove('modal-active'); if (lightboxImg) lightboxImg.src = ''; }, 300); }
+        const legalModal = document.getElementById('legal-modal'); const contentMentions = document.getElementById('content-mentions'); const contentCgv = document.getElementById('content-cgv'); const legalTitle = document.getElementById('legal-title');
+        function openLegal(type) { if (!legalModal || !contentMentions || !contentCgv || !legalTitle) return; legalModal.classList.remove('hidden'); legalModal.classList.add('flex'); setTimeout(() => legalModal.classList.remove('opacity-0'), 10); document.body.classList.add('modal-active'); if (type === 'mentions') { legalTitle.innerHTML = '<span class="text-rattoo-pink font-tattoo text-xl lowercase mr-2">Les</span> Mentions Légales'; contentMentions.classList.remove('hidden'); contentCgv.classList.add('hidden'); } else { legalTitle.innerHTML = '<span class="text-rattoo-pink font-tattoo text-xl lowercase mr-2">Les</span> CGV'; contentCgv.classList.remove('hidden'); contentMentions.classList.add('hidden'); } }
+        function closeLegal() { if (!legalModal) return; legalModal.classList.add('opacity-0'); setTimeout(() => { legalModal.classList.add('hidden'); legalModal.classList.remove('flex'); document.body.classList.remove('modal-active'); }, 300); }
+        if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); }); if (legalModal) legalModal.addEventListener('click', (e) => { if (e.target === legalModal) closeLegal(); }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (lightbox && !lightbox.classList.contains('hidden')) closeLightbox(); if (legalModal && !legalModal.classList.contains('hidden')) closeLegal(); } });
+        function showSuccessMessage() { const msg = document.getElementById('success-message'); if (!msg) return; msg.classList.remove('hidden'); setTimeout(() => { msg.classList.add('hidden'); const form = document.querySelector('#contact form'); if (form) form.reset(); }, 5000); }
+        const chatbotToggle = document.getElementById('chatbot-toggle'); const chatbotWindow = document.getElementById('chatbot-window'); const closeChat = document.getElementById('close-chat'); if (chatbotToggle && chatbotWindow) { chatbotToggle.addEventListener('click', () => { chatbotWindow.classList.toggle('hidden'); chatbotWindow.classList.toggle('flex'); const dot = chatbotToggle.querySelector('.bg-red-500'); if (dot) dot.classList.add('hidden'); }); } if (closeChat && chatbotWindow) { closeChat.addEventListener('click', () => { chatbotWindow.classList.add('hidden'); chatbotWindow.classList.remove('flex'); }); }
     </script>
     <script src="/ai-lab.js"></script>
 </body>
